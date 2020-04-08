@@ -1,2 +1,2 @@
 # rust-tools
-Minimal docker container wrapper for some tools that can't install or run on all my systems.
+A personal minimal docker container wrapper for some of the tools that can't install or run on all my systems. OpenSSL is not available on macOS for example, required by `cargo-edit`.
