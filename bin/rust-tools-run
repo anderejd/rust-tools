@@ -1,2 +1,6 @@
 #!/bin/sh
-docker run -v "$(pwd)"/:/workdir/ anderejd/rust-tools "$@"
+docker run \
+  -v "$(pwd)"/:/workdir/ \
+  --mount source=rust-tools-cargo-registry-vol,destination=/usr/local/cargo/registry \
+  anderejd/rust-tools \
+  "$@"

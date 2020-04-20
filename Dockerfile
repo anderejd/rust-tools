@@ -10,7 +10,7 @@ RUN cargo install cargo-edit
 FROM rust:latest
 COPY --from=builder $CARGO_HOME/bin $CARGO_HOME/bin
 
-# There needs to be an initialized cargo cacehe for cargo-edit to work at all.
+# There needs to be an initialized cargo cache for cargo-edit to work at all.
 # TODO: File a bugreport.
 RUN cargo search force_initialize_cargo_cache > /dev/null
 
