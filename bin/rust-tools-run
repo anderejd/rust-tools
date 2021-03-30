@@ -1,5 +1,6 @@
 #!/bin/sh
 docker run \
+  -e "TERM=xterm-256color" \
   -v "$(pwd)"/:/workdir/ \
   --mount source=rust-tools-cargo-registry-vol,destination=/usr/local/cargo/registry \
   anderejd/rust-tools \
